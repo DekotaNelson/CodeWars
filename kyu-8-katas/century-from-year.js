@@ -21,3 +21,7 @@ function century(year) {
       return Number(strYear.slice(0, (strYear.length - 2))) + 1;
     }
   }
+
+  function centuryTwo(year) {
+    return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
+  }
