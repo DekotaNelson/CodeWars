@@ -12,3 +12,14 @@
 // 1 -->  1
 // 2 --> 3 + 5 = 8
 
+function rowSumOddNumbers(n) {
+	let nRowStart = 1
+  for(i = 1; i < n; i++){
+    nRowStart += i*2
+  }
+  let sum = n === 1 ? 1 : nRowStart
+  for(i = 1; i < n; i++){
+    sum += nRowStart + (2*i)
+  }
+  return sum
+}
