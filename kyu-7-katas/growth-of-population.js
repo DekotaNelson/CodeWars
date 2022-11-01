@@ -26,3 +26,14 @@
 // Note:
 
 // Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
+
+function nbYear(startingPop, percentChange, migration, goalPop) {
+    let currentPop = startingPop
+    const percentDecimal = percentChange/100
+    let numYears = 0
+    while(currentPop < goalPop){
+      currentPop = currentPop + Math.floor(currentPop * percentDecimal) + migration
+      numYears++
+    }
+    return numYears
+  }
